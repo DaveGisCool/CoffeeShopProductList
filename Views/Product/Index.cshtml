@@ -1,0 +1,23 @@
+﻿@model List<Products>
+
+@{
+    ViewData["Title"] = "Products";
+}
+<style>
+    table#drinkTable {
+        width: 30%;
+        margin-left: 10%;
+        margin-right: 60%;
+        text-align: left;
+    }
+</style>
+
+<h1>Drinks</h1>
+
+@foreach (Products prod in Model)
+{
+<table id="drinkTable">
+    <tr><td width=60%><a href="/Product/Products?ID=@prod.ID">@prod.Name </a></td><td>@prod.Price.ToString("C")</td></tr>
+</table>
+    <br />
+}

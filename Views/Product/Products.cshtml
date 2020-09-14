@@ -1,0 +1,16 @@
+﻿@model Products
+
+@{
+    ViewData["Title"] = "Our Drinks";
+}
+
+<h1>@Model.Name</h1>
+
+<b>  @Model.Price.ToString("C") </b>(@Model.Category)
+<br />
+<br />
+Description:
+<br />
+<br />
+<i>@Model.Description </i> (ID: @Model.ID)
+
