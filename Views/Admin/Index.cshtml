@@ -1,7 +1,7 @@
 ﻿@model List<Products>
 
 @{
-    ViewData["Title"] = "Products";
+    ViewData["Title"] = "Admin Products";
 }
 <style>
     table#drinkTable {
@@ -20,9 +20,10 @@
         <tr>
             <td width=70%><a href="/Product/Products?ID=@prod.ID">@prod.Name </a></td>
             <td width=20%>@prod.Price.ToString("C")</td>
-            <td width=5%><h6> </h6></td>
-            <td><h6> </h6></td>
+            <td width=5%><a href="/Admin/Edit(@prod.ID)"><h6>Edit</h6></a></td>
+            <td><h6><a href="Admin/Index/Products.Delete(@prod.ID)">Delete</a></h6></td>
         </tr>
     </table>
     <br />
 }
+<h6><a href="/Admin/Create/">Add an item</a></h6>
